@@ -1,0 +1,44 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio user options
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+*.g.cs
+*.g.i.cs
+
+# Visual Studio Code workspace settings
+.vscode/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Rider IDE files
+.idea/
+
+# DotCover files
+*.dotCover
+
+# Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
