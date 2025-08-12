@@ -50,7 +50,7 @@ Manage your daily tasks easily with features like add, edit, delete, mark comple
 Upon running, a menu is displayed with options:
 
 ![screenshot](image/1.1.png)
-
+![screenshot](image/1.12.png)
 ## Database 
 task.json 
 
