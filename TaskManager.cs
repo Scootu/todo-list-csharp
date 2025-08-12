@@ -27,7 +27,7 @@ namespace To_Do_list
             task.ReadTask(last_id);
             taskIdToTaskObj[last_id] = task;
             Console.WriteLine($"Task id {last_id} Added!");
-            SaveTasks(taskIdToTaskObj);
+            SaveTasks();
         }
         public Dictionary<int,TaskModel> GetAllTasks()
         {
@@ -44,7 +44,7 @@ namespace To_Do_list
             task.UpdateTaskData();
             taskIdToTaskObj[id] = task; // update tasks
             Console.WriteLine($"Task id {id} updated!");
-            SaveTasks(taskIdToTaskObj);
+            SaveTasks();
         }
         public void MarkTaskAsCompleted(int id)
         {
@@ -58,7 +58,7 @@ namespace To_Do_list
             task.SetCompletedAt();
             taskIdToTaskObj[id] = task;
             Console.WriteLine($"Task id {id} marked as complete!");
-            SaveTasks(taskIdToTaskObj);
+            SaveTasks();
         }
         public void DeleteTask(int id)
         {
@@ -69,7 +69,7 @@ namespace To_Do_list
             }
             taskIdToTaskObj.Remove(id); // removed
             Console.WriteLine($"Task id {id} removed succusfully!");
-            SaveTasks(taskIdToTaskObj);
+            SaveTasks();
         }
         public Dictionary<int, TaskModel> SearchTasks(string keyword)
         {
@@ -91,7 +91,7 @@ namespace To_Do_list
             return results;
         }
 
-        public void SaveTasks(Dictionary<int,TaskModel> tasks)
+        public void SaveTasks()
         {
             try
             {
@@ -100,7 +100,7 @@ namespace To_Do_list
                     WriteIndented = true
                 };
 
-                string jsonString = JsonSerializer.Serialize(tasks, options);
+                string jsonString = JsonSerializer.Serialize(taskIdToTaskObj, options);
                 File.WriteAllText("task.json", jsonString);
             }
             catch (Exception ex)

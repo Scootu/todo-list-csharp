@@ -8,12 +8,12 @@ namespace To_Do_list
 {
     public class TaskModel
     {
-        private int Id;
-        private string Title;
-        private string Description;
-        private bool IsCompleted = false;
-        private DateTime CreatedAt;
-        private DateTime? CompletedAt;
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public bool IsCompleted { get; set; } = false;
+        public DateTime CreatedAt { get; set; }
+        public DateTime? CompletedAt { get; set; }
 
         // how i can prevent default copy / assignment operator ?
 
