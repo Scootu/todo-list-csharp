@@ -51,6 +51,30 @@ Upon running, a menu is displayed with options:
 
 ![screenshot](image/1.1.png)
 
+## Database 
+task.json 
+
+```bash
+{
+  "1": {
+    "Id": 1,
+    "Title": "Hello world",
+    "Description": "welcome this in the universe",
+    "IsCompleted": false,
+    "CreatedAt": "2025-08-12T19:10:57.9582023+01:00",
+    "CompletedAt": null
+  },
+  "2": {
+    "Id": 2,
+    "Title": "Play footplay",
+    "Description": "Play with my frindes at 4pm",
+    "IsCompleted": true,
+    "CreatedAt": "2025-08-12T19:14:25.1982764+01:00",
+    "CompletedAt": "2025-08-12T19:14:57.4556922+01:00"
+  }
+}
+
+```
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
